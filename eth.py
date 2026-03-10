@@ -6,4 +6,9 @@ def main():
     total_value = user_eth()
     print(f"You own {total_value:,.2f} USD")
 
-main()
+while True:
+    try:
+        main()
+        break
+    except ValueError:
+        print ("Only accepts numbers! Try again.")
